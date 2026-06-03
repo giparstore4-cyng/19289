@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Kyran & R — Sembilan Bulan yang Tak Terlupakan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fefcf8;
+            color: #2c2418;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.75;
+            scroll-behavior: smooth;
+        }
+
+        /* efek noise lembut */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(#e2d5c8 0.8px, transparent 0.8px);
+            background-size: 28px 28px;
+            opacity: 0.25;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 5rem;
+        }
+
+        /* tipografi */
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 3.6rem;
+            letter-spacing: -0.02em;
+            color: #4f2d2a;
+            text-align: center;
+            margin-top: 1.2rem;
+            margin-bottom: 0.25rem;
+            line-height: 1.2;
+        }
+
+        .subhead {
+            text-align: center;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: #b28b73;
+            margin-bottom: 0.5rem;
+            border-top: 1px solid #ecdccf;
+            display: inline-block;
+            padding-top: 0.8rem;
+        }
+
+        .subhead-wrapper {
+            text-align: center;
+        }
+
+        .timeline {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #b2896e;
+            margin-bottom: 2.8rem;
+            font-style: italic;
+            background: #fff5ef;
+            display: inline-block;
+            padding: 0.3rem 1.2rem;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+        }
+
+        .story-block {
+            margin-bottom: 3.8rem;
+        }
+
+        .story-block h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            font-size: 1.9rem;
+            margin-bottom: 1.2rem;
+            color: #6a423a;
+            border-left: 5px solid #dbb59a;
+            padding-left: 1.2rem;
+        }
+
+        .story-block p {
+            margin-bottom: 1.4rem;
+            font-size: 1.03rem;
+            font-weight: 400;
+            color: #2f241e;
+        }
+
+        .quote-indent {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.28rem;
+            color: #b47d62;
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1rem 1.5rem;
+            border-left: none;
+            background: #fff8f2;
+            border-radius: 32px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .kata-spesial {
+            background: #fef1e8;
+            padding: 2rem;
+            border-radius: 48px 24px 48px 24px;
+            margin: 2.2rem 0;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .kata-spesial p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.45rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #572e26;
+        }
+
+        .kata-spesial span {
+            font-size: 0.75rem;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: #b08065;
+        }
+
+        .separator-custom {
+            width: 70px;
+            height: 2px;
+            background: #eddacb;
+            margin: 2rem auto;
+        }
+
+        /* efek fade */
+        .fade {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.85s cubic-bezier(0.2, 0.9, 0.3, 1.1), transform 0.85s ease;
+        }
+        .fade.reveal {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        footer {
+            margin-top: 4.5rem;
+            text-align: center;
+            font-size: 0.78rem;
+            color: #bc9b86;
+            border-top: 1px solid #eadbcb;
+            padding-top: 2rem;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 1.2rem 1.2rem 3rem;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            .story-block h2 {
+                font-size: 1.5rem;
+            }
+            .story-block p {
+                font-size: 0.95rem;
+            }
+            .kata-spesial p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="subhead-wrapper">
+        <div class="subhead">— sebuah memori yang tak ingin usai —</div>
+    </div>
+    <h1>Kyran & R</h1>
+    <div style="text-align: center; margin-top: -0.2rem; margin-bottom: 1rem;">
+        <div class="timeline">sembilan bulan · satu rasa · perpisahan karena lulus</div>
+    </div>
+
+    <!-- BAB 1 : Awal yang tak direncanakan -->
+    <div class="story-block fade">
+        <h2>1. Ketika perkenalan berbisik</h2>
+        <p>Kyran bukan tipe lelaki yang percaya pada takdir. Baginya hidup adalah rangkaian pilihan dan kebetulan yang diolah. Sampai suatu sore di awal tahun ajaran, di lorong sekolah yang sempit, dia bertemu dengan R. R — hanya satu huruf, sebuah inisial yang sengaja ia pilih untuk alasan yang tak pernah ia ceritakan sepenuhnya. “Panggil saja R,” katanya dengan senyum tipis saat Kyran bertanya nama lengkapnya. “Karena kadang satu huruf lebih jujur daripada seribu kata.”</p>
+        <p>Mereka satu kelas, duduk bersebelahan karena kebetulan absen. R pendiam namun tajam, membawa buku puisi di sela-sela catatan matematika. Kyran lebih terbuka, suka bercanda, tapi hatinya rapuh. Sembilan bulan pertama perkenalan mereka adalah ruang latihan untuk saling mengerti. Bukan cinta pada pandangan pertama, tapi lebih kepada gravitasi yang menarik dua planet perlahan. Hingga tanpa sadar, Kyran selalu menyisakan kursi di kantin untuk R. Dan R selalu menyimpan satu biskuit di tasnya untuk Kyran.</p>
+        <div class="quote-indent">“Kita tidak pernah bilang suka, tapi mata kita bicara dalam bahasa yang tidak perlu diterjemahkan.”</div>
+        <p>Mereka mulai sering berjalan pulang bersama, meskipun arah rumah berbeda. Kyran memutar jalan 15 menit lebih lama hanya untuk menemani R sampai perempatan. R pura-pura tidak tahu, namun di dalam hatinya dia mendokumentasikan setiap langkah. Sembilan bulan terasa seperti sembilan tahun karena setiap hari terasa padat oleh tawa kecil, diam yang nyaman, dan janji-janji tersirat yang tidak pernah diucapkan. Mereka menyebutnya ‘pendekatan’, tapi sebenarnya itu adalah fase paling jujur dari dua orang yang takut kehilangan.</p>
+    </div>
+
+    <!-- BAB 2 : Tumbuh dalam kedekatan -->
+    <div class="story-block fade">
+        <h2>2. Sembilan bulan yang membentuk warna</h2>
+        <p>Bulan pertama, Kyran belajar menikmati kopi pahit karena R menyukainya. Bulan ketiga, R hafal lagu favorit Kyran dan tanpa sengaja menyenandungkannya saat hujan. Bulan keenam, mereka sudah memiliki banyak kode: sentuhan ringan di lengan berarti 'aku di sini', dan jeda hening di bawah pohon mangga setelah pulang sekolah adalah cara mereka beristirahat dari dunia. Tak ada status, tak ada janji. Hanya dua jiwa yang beriringan seperti sungai dan tepiannya.</p>
+        <p>Namun di balik keindahan itu, ada kegelisahan samar. Kelulusan sudah di depan mata, hanya hitungan pekan lagi. Mereka berada di tingkat akhir. Kyran akan melanjutkan pendidikan ke kota seberang, sementara R mendapat beasiswa di pulau yang berbeda. Jeda waktu dan jarak akan menjadi jurang yang nyata. Tapi mereka memilih untuk mengabaikan kegelisahan itu, seolah dengan tidak membicarakannya, kenyataan akan berhenti bergerak.</p>
+        <div class="quote-indent">“Kami mencuri waktu di sela-sela ujian, berpura-pura bahwa lulusan hanyalah kata lain untuk liburan panjang.”</div>
+        <p>R sering menulis catatan kecil di buku tulis Kyran, tentang puisi pendek dan mimpi yang tidak pernah ingin ia selesaikan sendirian. Kyran membalas dengan gambar-gambar kecil di margin halaman: bunga, bulan, atau dua siluet duduk di atas tembok. Mereka hidup dalam gelembung sembilan bulan yang rapuh, tapi indah seperti kembang api — terang, hangat, dan tahu bahwa sebentar lagi akan padam.</p>
+    </div>
+
+    <!-- BAB 3 : Perpisahan karena lulus -->
+    <div class="story-block fade">
+        <h2>3. Lulus, kata yang memisahkan</h2>
+        <p>Hari pengumuman kelulusan tiba seperti tamu tak diundang. Langit sore itu jingga pucat, seolah ikut berduka. Kyran dan R berdiri di halaman belakang sekolah, di bawah pohon flamboyan yang sedang tidak berbunga. Mereka baru saja menerima ijazah, dan kertas itu terasa lebih berat dari yang seharusnya.</p>
+        <p>“Jadi, ini ya,” R memulai, matanya menerawang ke kejauhan. “Sembilan bulan. Rasanya baru kemarin kamu salah ambil makan siangku dan kita malah bertengkar soal sambal.”</p>
+        <p>Kyran tertawa kecil, tapi suaranya serak. “R, aku tahu kita nggak pernah ngomongin perasaan. Tapi sembilan bulan ini ... aku merasa menemukan versi terbaik dari diriku. Karena kamu.”</p>
+        <p>R menggigit bibir, menahan sesuatu yang menggenang di pelupuk matanya. “Kenapa kita tidak memulai lebih awal? Kenapa kita hanya punya sembilan bulan?”</p>
+        <p>“Mungkin karena cinta kadang datang dalam kemasan yang salah waktu,” jawab Kyran perlahan. “Tapi aku tidak akan menukar sembilan bulan ini dengan sembilan tahun bersama orang lain.”</p>
+        <p>Mereka terdiam. Angin sore membawa aroma kertas dan debu. R menggapai tangan Kyran, menggenggamnya erat. “Kyran, aku menyimpan semua catatan darimu. Setiap gambar, setiap puisi yang tak pernah kukirim balik. Maaf aku tidak cukup berani bilang aku suka padamu dari bulan pertama.”</p>
+        <p>Kyran menggeleng. “Jangan minta maaf. Kita sama-sama takut. Dan mungkin ketakutan itulah yang membuat sembilan bulan ini begitu berharga. Karena kita tidak menyia-nyiakannya.”</p>
+        <div class="separator-custom"></div>
+        <p>Lalu tibalah saat perpisahan yang sesungguhnya. Mereka berpelukan — pelukan pertama yang terasa seperti pernyataan cinta terpendam. R menangis di bahu Kyran, dan Kyran membiarkan air matanya jatuh tanpa malu. Dia berbisik, “Sembilan bulan bersamamu adalah waktu terpendek yang terasa paling abadi.” R menjawab dengan isak, “Kalau suatu hari nanti kita dipertemukan lagi, tolong jangan hanya jadi pendekatan. Tapi jika tidak... biarkan R ini menjadi inisial yang selalu membuatmu tersenyum sedih.”</p>
+    </div>
+
+    <!-- KATA-KATA PENTING UNTUK MEREKA -->
+    <div class="kata-spesial fade">
+        <p>“Sembilan bulan bukanlah waktu yang singkat untuk mencintai, tapi terlalu singkat untuk selamanya. Dan kelulusan mengajarkan bahwa ada cinta yang lahir di antara ujian akhir dan janji yang tak sempat diucapkan.”</p>
+        <span>— untuk Kyran & R, yang berpisah karena ijazah, bukan karena hati —</span>
+    </div>
+
+    <div class="story-block fade">
+        <h2>4. Stasiun terakhir: selamat jalan, R</h2>
+        <p>Hari keberangkatan R ke kotanya yang baru. Kyran memutuskan untuk tidak mengantar ke bandara — terlalu berat, katanya. Tapi pada akhirnya dia berdiri di balik pilar stasiun kereta, menyaksikan dari kejauhan. R memakai jaket biru muda yang dulu Kyran puji. Dia membawa koper kecil dan sebuah buku catatan usang. Di halaman terakhir buku itu, R menulis: “Kalau lulusan memisahkan kita, biarkan kenangan yang menyatukan.”</p>
+        <p>Kyran menghampiri diam-diam saat R hendak masuk ke gerbang. Dia meraih pergelangan tangan R dan menyerahkan sebuah kotak kayu kecil. “Ini hadiah kelulusan. Seharusnya kuberikan setelah upacara, tapi aku takut terlambat.”</p>
+        <p>R membuka kotak itu — di dalamnya ada gelang tali dengan dua manik kayu berukir huruf K dan R. “Supaya kita ingat meskipun jarak memisahkan,” kata Kyran. R memakainya langsung, lalu dia mengambil sesuatu dari saku jaketnya: sebuah puisi tulisan tangan yang dibingkai kecil. “Untukmu. Agar kau tahu bahwa R bukan hanya inisial, tapi rasa yang tak pernah usai.”</p>
+        <p>Pengumuman terakhir berbunyi. R melangkah, lalu berbalik dan mengirimkan kecupan dari telapak tangannya. Kyran tersenyum getir, mengangguk. Pintu kereta tertutup, meninggalkan hening yang memekakkan. Kyran masih berdiri di peron sampai kereta menghilang. Dia membaca puisi R: </p>
+        <div class="quote-indent" style="font-size:1rem; background:#faf3ec;">
+            “Sembilan bulan hanya sepersekian dari umur,<br>
+            tapi kau berhasil mengisi setiap detiknya dengan makna.<br>
+            Kalau kelak kita lupa arah pulang,<br>
+            ingatlah bahwa pernah ada kita —<br>
+            meski hanya dalam inisial dan kenangan yang tak ingin mati.”
+        </div>
+        <p>Kyran menyimpan puisi itu di dekat jantungnya. Dia tahu ini bukan akhir yang bahagia, tapi juga bukan akhir yang sia-sia. Sembilan bulan yang singkat telah mengubahnya menjadi seseorang yang percaya bahwa cinta tak selalu butuh status. Kadang, cinta hadir dalam diam yang panjang, dalam pendekatan yang tak pernah selesai, dan dalam perpisahan karena lulus yang meninggalkan lubang di dada.</p>
+    </div>
+
+    <div class="story-block fade">
+        <h2>5. Bulan-bulan setelah kelulusan</h2>
+        <p>Seperti puisi yang terputus di bait terakhir, kehidupan Kyran dan R berjalan pada rel masing-masing. Kyran sibuk dengan kuliah, berusaha tenggelam dalam tugas agar tidak terkenang tawa R. Namun setiap kali mendengar lagu yang dulu mereka putar bersama di sela belajar, dadanya sesak. R di kota barunya, di antara mahasiswa dan buku tebal, kadang meraba gelang kayu di pergelangan tangan. Dia tersenyum sendiri, lalu menangis pelan karena Kyran tidak ada di sampingnya saat hujan.</p>
+        <p>Mereka masih sesekali mengirim pesan. Tapi frekuensinya menurun, karena setiap pesan terasa seperti mengorek luka. “Halo, apa kabar?” menjadi kalimat yang terlalu rumit untuk dijawab jujur. Keduanya paham bahwa kelulusan telah memisahkan mereka lebih dari sekadar geografis — mereka harus dewasa, dan kedewasaan kadang berarti melepaskan apa yang paling kita inginkan.</p>
+        <div class="quote-indent">“Ada kalanya cinta yang paling murni tidak pernah terealisasi. Ia hanya menjadi cerita yang membuatmu hangat di malam sepi, sekaligus membuatmu sesak napas setiap kali terkenang.”</div>
+        <p>Kyran tidak pernah membuang catatan-catatan kecil dari R. Ia menyimpannya dalam map khusus, seperti harta karun. R masih menyimpan gambar-gambar Kyran di sampul buku hariannya. Sembilan bulan mungkin hanya sebatas musim, tapi bagi mereka itu adalah sembilan bulan yang mengubah definisi waktu. Dan meskipun kelulusan memaksa mereka berpisah, tak ada satu pun yang bisa menghapus jejak langkah di hati masing-masing.</p>
+    </div>
+
+    <!-- PESAN TERAKHIR -->
+    <div class="kata-spesial fade" style="background: #f7ede5;">
+        <p>“Kyran, jika suatu hari kau membaca ini dalam memoriku — terima kasih untuk sembilan bulan yang tak pernah kusangka akan menjadi cerita terindah sekaligus tersedih di hidupku. R bukan hanya huruf, tapi rasa yang kusimpan hanya untukmu.”</p>
+        <span>— R (sebuah inisial yang menjadi takdir) —</span>
+    </div>
+
+    <div class="story-block fade">
+        <h2>Epilog: Tak ada lulusan yang bisa melupakan cinta sejati</h2>
+        <p>Malam sebelum wisuda kelulusan mereka yang sesungguhnya (dari masa sekolah ke dunia yang lebih luas), Kyran menulis di media sosialnya sebuah kalimat: “Sembilan bulan denganmu lebih bermakna daripada sembilan tahun sendiri. R, aku harap dunia mempertemukan kita lagi.”</p>
+        <p>R melihat unggahan itu dari akun lamanya, tiga hari kemudian. Dia tidak memberi like, tidak memberi komentar. Tapi dia mengetik di ponselnya, menyimpannya sebagai draf: “Aku juga merindukan sembilan bulan itu. Jika kelak kita bertemu, jangan hanya pendekatan lagi. Tapi jika tidak, biarkan kenangan ini menjadi ijazah cinta kita yang tak pernah diakui dunia.”</p>
+        <p>Dan begitulah kisah Kyran dan R — dua orang yang hanya punya sembilan bulan, tapi merasakan cinta yang seharusnya butuh waktu puluhan tahun untuk ditemukan. Kelulusan memisahkan mereka, tapi tidak pernah benar-benar memutuskan. Karena setiap kali Kyran melewati perempatan tempat dulu mereka berpisah, hatinya berbisik: “R, aku masih di sini.” Dan di setiap desiran angin yang membawa aroma hujan, R selalu berdoa dalam diam: “Kyran, terima kasih sudah menjadi rumah walau hanya sementara.”</p>
+        <div class="separator-custom"></div>
+        <p style="text-align: center; font-size: 0.9rem; color:#8c6e5d;"><i>“Dan pada akhirnya, kelulusan hanyalah alasan untuk berpisah, tapi cinta yang tulus akan selalu mencari cara untuk tetap tinggal dalam ingatan.”</i></p>
+    </div>
+
+    <footer>
+        <p>untuk Kyran dan R — sembilan bulan yang terasa seperti selamanya<br>kelulusan bukanlah akhir, hanya jeda panjang yang tak pasti</p>
+        <p style="margin-top: 0.6rem;">✧  K & R  ✧</p>
+    </footer>
+</div>
+
+<script>
+    // Intersection Observer untuk efek fade
+    const faders = document.querySelectorAll('.fade');
+    const observerOptions = {
+        threshold: 0.12,
+        rootMargin: "0px 0px -20px 0px"
+    };
+    const fadeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('reveal');
+                fadeObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    faders.forEach(el => {
+        fadeObserver.observe(el);
+    });
+
+    // Trigger elemen yang mungkin sudah terlihat saat load
+    window.addEventListener('load', () => {
+        faders.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 80) {
+                el.classList.add('reveal');
+            }
+        });
+    });
+</script>
+</body>
+</html>
